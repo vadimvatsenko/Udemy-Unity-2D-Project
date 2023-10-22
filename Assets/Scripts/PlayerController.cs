@@ -80,19 +80,28 @@ public class PlayerController : MonoBehaviour
         { // если у обекта с которым столкнулся Player есть тег Ground
             isGround = true;
         }
-        if (other.gameObject.CompareTag("Finish")) // добавляем условие столкновения с обьектом тег которого финиш
-        {
-            isFinish = true;
-            Debug.Log("Finish");
-        }
+
     }
 
 
 
-    void OnCollisionExit2D(Collision2D other) // OnCollisionExit2D - функция запускается когда прекращается столновение коллайдеров
+    private void OnTriggerExit2D(Collider2D other) // OnCollisionExit2D - функция запускается когда прекращается столновение коллайдеров
     {
-        isFinish = false;
-        Debug.Log("Not Finish");
+        if (other.CompareTag("Finish"))
+        {
+            isFinish = false;
+            Debug.Log("Not Finish");
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Finish")) // обращение сразу без gameObject(other.gameObject.CompareTag) так как other в данном случае и есть игровой обьект
+        {
+            isFinish = true;
+            Debug.Log("Finish");
+        }
     }
 
 
