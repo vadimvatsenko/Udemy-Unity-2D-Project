@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    private Finish finish; // получаем доступ к скрипту Finish
     Rigidbody2D rb;
     private float horizontal = 0f; // устанавливаем значение по умолчанию
 
@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true; // переменная которая хранит значение, повернуто ли лицо в право, по умолчанию правда
     private bool isFinish = false;
 
-    private GameObject finish; // добаляем обьект финиша
+    //private GameObject finish; // добаляем обьект финиша
 
 
     void Start() // начинает работать со второго фрейма в сцене
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
         // можно было бы сделать через [SerializeField] private GameObject finish и в Юнити переместить обьект дома а игрока, 
         //но что если у нас будет много уровней, тогда нужно будет перемещать кучу финишей, что крайне неудобно
-        finish = GameObject.FindGameObjectWithTag("Finish"); // получаем игровой обьект финиш(Дом в сцене), FindGameObjectWithTag - метод который ищет тег
+        finish = GameObject.FindGameObjectWithTag("Finish").GetComponent<Finish>(); // получаем игровой обьект финиш(Дом в сцене), FindGameObjectWithTag - метод который ищет тег и в нем ищет скрипт Finish
 
 
 
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F) && isFinish) // есди нажать клавишу F то наш обьект финиш исчезнет со сцены
         {
-            finish.SetActive(false);
+            finish.FinishLevel(); // вызываем метод FinishLevel() в скрипте Finish;
 
         }
 
