@@ -1,0 +1,260 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.20f1 (41c4e627c95f) revision 4310246'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 22621.1105; Version 2009; 64bit' Language: 'ru' Physical Memory: 16295 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+D:\Programms\Unity 2020.3.20f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Udemy/Udemy Unity 2D Project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52105
+Successfully changed project path to: D:/Udemy/Udemy Unity 2D Project
+D:/Udemy/Udemy Unity 2D Project
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 41.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.20f1 (41c4e627c95f)
+[Subsystems] Discovering subsystems at path D:/Programms/Unity 2020.3.20f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Udemy/Udemy Unity 2D Project/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 6600 (ID=0x73ff)
+    Vendor:   
+    VRAM:     8147 MB
+    Driver:   31.0.21023.2010
+Initialize mono
+Mono path[0] = 'D:/Programms/Unity 2020.3.20f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Programms/Unity 2020.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Programms/Unity 2020.3.20f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56580
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Programms/Unity 2020.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001125 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 42.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.308 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1308ms)
+		BeginReloadAssembly (65ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (399ms)
+			LoadAssemblies (65ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (147ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (165ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (43ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (79ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003247 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 49.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.107 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1108ms)
+		BeginReloadAssembly (154ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (896ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (281ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (359ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (49ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (222ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2250 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.3 MB.
+System memory in use after: 98.4 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2692.
+Total: 3.207500 ms (FindLiveObjects: 0.283800 ms CreateObjectMapping: 0.052400 ms MarkObjects: 2.799000 ms  DeleteObjects: 0.071100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/Top_wear.png
+  artifactKey: Guid(5610271362c08b240b4e1abf9a5b612b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/Top_wear.png using Guid(5610271362c08b240b4e1abf9a5b612b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eecfe68782bbfab5eafbbdc338945ac0') in 0.114290 seconds 
+  Import took 0.117425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Hand.png
+  artifactKey: Guid(bfe9470e48bc98d4594a66622ba8e4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Hand.png using Guid(bfe9470e48bc98d4594a66622ba8e4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '090aace36ff0bc416f95bf9261cfd069') in 0.009492 seconds 
+  Import took 0.012422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/shadow.png
+  artifactKey: Guid(12ad595c99b35a940958b5c00de4b99e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/shadow.png using Guid(12ad595c99b35a940958b5c00de4b99e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85a381cab232eec9d92035d5d85148cc') in 0.009519 seconds 
+  Import took 0.012732 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Foot.png
+  artifactKey: Guid(b0f63176509e32e47a7685a6bc9c8cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Foot.png using Guid(b0f63176509e32e47a7685a6bc9c8cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd27d69d0fb70e5bb0cb3d7f803b92e06') in 0.009070 seconds 
+  Import took 0.012567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Finger_wear.png
+  artifactKey: Guid(d03d6e7d29e8195448502a9b920589a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Finger_wear.png using Guid(d03d6e7d29e8195448502a9b920589a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf8051a92f83c75b65bb2ec8b2c7789b') in 0.009391 seconds 
+  Import took 0.012914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Weapon.png
+  artifactKey: Guid(d9d955207cd9bf24ca00ed292731333f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Weapon.png using Guid(d9d955207cd9bf24ca00ed292731333f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36ec09ff727d200b8c1315afe99a25e0') in 0.009959 seconds 
+  Import took 0.013423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Foot_wear.png
+  artifactKey: Guid(9a9dacd28e8935d43961f31c4c4753fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Foot_wear.png using Guid(9a9dacd28e8935d43961f31c4c4753fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82a43d2d703f4f676f730e9c82bc0295') in 0.009048 seconds 
+  Import took 0.012158 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Hand_wear.png
+  artifactKey: Guid(62b418cb5738ec545a750e5dad2959cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Hand_wear.png using Guid(62b418cb5738ec545a750e5dad2959cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd958e4827d8c9b0241071b8da9fce3ef') in 0.009018 seconds 
+  Import took 0.012225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Shoulder_wear.png
+  artifactKey: Guid(94c0117818ff55343bf808398791a4dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Shoulder_wear.png using Guid(94c0117818ff55343bf808398791a4dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84928d96cb450b20840207188516a720') in 0.009447 seconds 
+  Import took 0.013008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Thigh_wear.png
+  artifactKey: Guid(440e09337e4eef846a322a1d9fbab2cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Thigh_wear.png using Guid(440e09337e4eef846a322a1d9fbab2cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c00d0c4deaabfc6a65116e23b8a65585') in 0.009236 seconds 
+  Import took 0.012761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Finger.png
+  artifactKey: Guid(52087d8b9c7e3634ea12eea7132ce866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Finger.png using Guid(52087d8b9c7e3634ea12eea7132ce866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb9d5ccadde9ea86b72013e6fca6ec69') in 0.009267 seconds 
+  Import took 0.012717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Leg_wear.png
+  artifactKey: Guid(ad56a081fe719b045988653592210e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Leg_wear.png using Guid(ad56a081fe719b045988653592210e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd6f13a143f0a64d6bf8d758179e18a7') in 0.009339 seconds 
+  Import took 0.012939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Leg.png
+  artifactKey: Guid(f65c3f688a745b549a53aef20971df16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Leg.png using Guid(f65c3f688a745b549a53aef20971df16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fd3e831d98c9005c7b7d69bebd8c251') in 0.009095 seconds 
+  Import took 0.012472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Shoulder.png
+  artifactKey: Guid(cbf1cedb7de0fc044bbace6bbf1d7f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Shoulder.png using Guid(cbf1cedb7de0fc044bbace6bbf1d7f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d5c9b591986d08dba7b11b8687f27ce') in 0.009575 seconds 
+  Import took 0.012883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Thigh.png
+  artifactKey: Guid(3ee39ed62521fa04f961e913347cda62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_Thigh.png using Guid(3ee39ed62521fa04f961e913347cda62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6462fa621f20eb3496a6c96e2405de8d') in 0.009006 seconds 
+  Import took 0.012385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_eyebrow.png
+  artifactKey: Guid(01181c9f43994ae4da5afad74a086cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character pack/BURLY-MAN_1_swordsman/[ size down to 50% ]/R_eyebrow.png using Guid(01181c9f43994ae4da5afad74a086cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d4be581b0cc4b94f46724b435512925') in 0.010398 seconds 
+  Import took 0.013808 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
