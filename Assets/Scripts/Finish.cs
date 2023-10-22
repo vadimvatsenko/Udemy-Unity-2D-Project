@@ -5,6 +5,11 @@ using UnityEngine;
 public class Finish : MonoBehaviour
 {
     private bool isActivated = false; // создаем переменную которая отвечает за активацию рычага
+
+    public void Activate()
+    {
+        isActivated = true;
+    }
     public void FinishLevel()
     {
         if (isActivated)
