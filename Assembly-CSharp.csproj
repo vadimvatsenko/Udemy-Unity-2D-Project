@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Character pack\Demo_GameResource\Script\CharacterController_2D.cs" />
+     <Compile Include="Assets\Scripts\LeverArm.cs" />
      <Compile Include="Assets\Character pack\Demo_GameResource\Script\Demo_GM.cs" />
      <Compile Include="Assets\Character pack\Demo_GameResource\Script\ColliderEvent_Sender.cs" />
      <Compile Include="Assets\Character pack\Demo_GameResource\Script\WoodDoll_Mgr.cs" />
@@ -46,7 +47,7 @@
      <Compile Include="Assets\Character pack\BURLY-MAN_1_swordsman\Free_GM.cs" />
      <Compile Include="Assets\Scripts\old scripts\PlayerController_old.cs" />
      <Compile Include="Assets\Scripts\Finish.cs" />
-     <Compile Include="Assets\Scripts\LeverArm.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Programms\Unity 2020.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

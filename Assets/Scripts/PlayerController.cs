@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(1)) && isGround) // если нажал на Спейс и Isground = true,
         {
             isJump = true;
+            Debug.Log("Enter Space");
         }
 
         // if (Input.GetKeyDown(KeyCode.F) && isFinish) // есди нажать клавишу F то наш обьект финиш исчезнет со сцены
