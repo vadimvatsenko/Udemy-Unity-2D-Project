@@ -43,11 +43,12 @@
      <Compile Include="Assets\Character pack\Demo_GameResource\Script\WoodDoll_Mgr.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Character pack\Demo_GameResource\Script\DestroyEffect.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\old scripts\FollowingCamera.cs" />
      <Compile Include="Assets\Character pack\BURLY-MAN_1_swordsman\Free_GM.cs" />
      <Compile Include="Assets\Scripts\old scripts\PlayerController_old.cs" />
      <Compile Include="Assets\Scripts\Finish.cs" />
-     <Compile Include="Assets\Scripts\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\EnemyVision.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Programms\Unity 2020.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

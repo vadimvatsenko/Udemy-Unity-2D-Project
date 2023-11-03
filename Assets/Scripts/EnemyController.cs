@@ -16,6 +16,11 @@ public class EnemyController : MonoBehaviour
 
     private float _waitTime;
 
+    public bool IsFacingRight // Создаем публичную переменную которая нам будет возвращать занчение _isFacingRight (это функция геттер), IsFacingRight - с большой буквы
+    {
+        get => _isFacingRight;
+    }
+
     private void Start()
     {
         _waitTime = timeToWait;
