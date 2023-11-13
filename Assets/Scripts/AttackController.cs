@@ -15,4 +15,14 @@ public class AttackController : MonoBehaviour
             animator.SetTrigger("attack");
         }
     }
+
+    public bool IsAttack
+    {
+        get => _isAttack;
+    }
+
+    public void FinishAttack()
+    {
+        _isAttack = false;
+    }
 }
