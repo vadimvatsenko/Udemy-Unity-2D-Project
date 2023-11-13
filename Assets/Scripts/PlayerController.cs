@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
         if (isJump) // если isJump true то выполни код
         {
-            _rb.AddForce(new Vector2(0f, 300f)); // даем силу игроку
+            _rb.AddForce(new Vector2(0f, 500f)); // даем силу игроку
             _isGround = false;
             isJump = false;
         }

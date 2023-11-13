@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyVision : MonoBehaviour
@@ -39,7 +37,7 @@ public class EnemyVision : MonoBehaviour
             _currentHitDistance = hit.distance;
             if (currentHitObject.CompareTag("Player"))
             { // если обьект столкновения равен тегу Player
-
+                _enemyController.StartChasingPlayer(); // вызываем функцию приследования игрока
             }
 
         }
