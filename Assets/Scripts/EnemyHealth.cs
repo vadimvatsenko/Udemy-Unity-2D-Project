@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; // добавляем библиотеку для работы с UI
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] private Slider healthSlider;
     [SerializeField] private float health = 100f;
     private Animator _animator;
 

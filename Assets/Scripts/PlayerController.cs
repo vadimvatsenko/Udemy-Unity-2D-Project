@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private LeverArm _leverArm; // получаем обьект levelArm
     private Finish _finish; // получаем доступ к скрипту Finish
     Rigidbody2D _rb;
+    [SerializeField] private float speedX = -1f;
     [SerializeField] private Animator animator; // получаем доступ к аниматору
-    private LeverArm _leverArm; // получаем обьект levelArm
+    [SerializeField] private Transform playerModelTransform; // урок 72 мы создали переменную, в юнити мы поместим в нее модель из Player, для того, чтобы поварачивалась сама модель, о не плееер, для того, чтобы не переворачивался наш slider
     private float _horizontal = 0f; // устанавливаем значение по умолчанию
 
-    [SerializeField] private float speedX = -1f;
 
     const float speedMultiplier = 360f;
     //
@@ -142,9 +143,9 @@ public class PlayerController : MonoBehaviour
     void Flip()
     { // метод переключения положения игрока
         _isFacingRight = !_isFacingRight; // означает, что он не должен быить равен самому себе
-        Vector3 playerScale = transform.localScale; // в transform.localScale хранятся три переменные scale(x,y,z) текущей позиции игрока
+        Vector3 playerScale = playerModelTransform.localScale; // в transform.localScale хранятся три переменные scale(x,y,z) текущей позиции игрока
         playerScale.x = playerScale.x * (-1); // меняет игрока в противоложную сторону // или playerScale.x *= -1
-        transform.localScale = playerScale; // теперь присваеваем значение персонажа
+        playerModelTransform.localScale = playerScale; // теперь присваеваем значение персонажа
 
         // если коротко, мы скопировали весь вектор, потом поменяли его значение и в конце присвоили новое
     }
