@@ -6,18 +6,25 @@ using UnityEngine.UI; // добавляем библиотеку для рабо
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private Slider healthSlider;
-    [SerializeField] private float health = 100f;
-    private Animator _animator;
+    [SerializeField] private float totalHealth = 100f;
+    [SerializeField] private Animator animator;
+
+    //private Animator _animator;
+    private float _health;
+
 
     private void Start()
     {
-        _animator = GetComponent<Animator>(); // получаем аниматора внутри нашего компонента, он находится там
+        _health = totalHealth;
+        //_animator = GetComponent<Animator>(); // получаем аниматора внутри нашего компонента, он находится там
+        InitHealth();
     }
     public void ReduceHealth(float damage)
     {
-        health -= damage;
-        _animator.SetTrigger("TakeDamage");
-        if (health < 0f)
+        _health -= damage;
+        InitHealth();
+        animator.SetTrigger("TakeDamage");
+        if (_health < 0f)
         {
             Die();
         }
@@ -26,5 +33,10 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         gameObject.SetActive(false);
+    }
+
+    private void InitHealth()
+    {
+        healthSlider.value = _health / totalHealth;
     }
 }

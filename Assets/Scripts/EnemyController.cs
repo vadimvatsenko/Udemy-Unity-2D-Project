@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float timeToChase = 3f; // 3 секунды будет нас преследовать враг, после того как мы пропали с области видимости
     [SerializeField] private float minDistanceToPlayer = 1.5f; // переменная которая хранит минимальную дистанцтю врага к игроку
     [SerializeField] private float chasingSpeed = 3f; // скорость преследования нашего игрока
+    [SerializeField] private Transform enemyModelTransform;
 
     private Rigidbody2D _rb; // для управления физикой нашего врага
     private Transform _playerTransform; // переменная в которой будет хранится позиция игрока, нужно для преследования игрока
@@ -165,9 +166,9 @@ public class EnemyController : MonoBehaviour
     void Flip()
     { // метод переключения положения игрока
         _isFacingRight = !_isFacingRight; // означает, что он не должен быить равен самому себе
-        Vector3 playerScale = transform.localScale; // в transform.localScale хранятся три переменные scale(x,y,z) текущей позиции игрока
+        Vector3 playerScale = enemyModelTransform.localScale; // в transform.localScale хранятся три переменные scale(x,y,z) текущей позиции игрока
         playerScale.x = playerScale.x * (-1); // меняет игрока в противоложную сторону // или playerScale.x *= -1
-        transform.localScale = playerScale; // теперь присваеваем значение персонажа
+        enemyModelTransform.localScale = playerScale; // теперь присваеваем значение персонажа
 
         // если коротко, мы скопировали весь вектор, потом поменяли его значение и в конце присвоили новое
     }

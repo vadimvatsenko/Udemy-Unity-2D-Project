@@ -5,6 +5,7 @@ using UnityEngine.UI; // добавляем библиотеку для рабо
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] private GameObject gameOverCanvas;
     [SerializeField] private Slider healthSlider;
     [SerializeField] private float totalHealth = 200f;
     [SerializeField] private Animator animator;
@@ -13,16 +14,15 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         _health = totalHealth;
+        InitHealth();
     }
 
-    private void Update()
-    {
-        healthSlider.value = _health / totalHealth; // поскольку value может быть от 0 до 1, то мы уже не можем делить на 100, потому пишем такую формулу
-    }
+
     public void ReduceHealth(float damage)
     {
         _health -= damage;
         animator.SetTrigger("TakeDamage");
+        InitHealth();
         if (_health < 0f)
         {
             Die();
@@ -36,5 +36,11 @@ public class PlayerHealth : MonoBehaviour
 
 
         gameObject.SetActive(false);
+        gameOverCanvas.SetActive(true);
+    }
+
+    private void InitHealth()
+    {
+        healthSlider.value = _health / totalHealth;
     }
 }
