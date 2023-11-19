@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform playerModelTransform; // урок 72 мы создали переменную, в юнити мы поместим в нее модель из Player, для того, чтобы поварачивалась сама модель, о не плееер, для того, чтобы не переворачивался наш slider
     private float _horizontal = 0f; // устанавливаем значение по умолчанию
 
+    //private AudioSource _jumpSound;
+
+
 
     const float speedMultiplier = 360f;
     //
@@ -21,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private bool _isLeverArm = false; // является ли это рычагом
     //
     //private GameObject finish; // добаляем обьект финиша
+    [SerializeField] private AudioSource jumpSound;
 
 
     void Start() // начинает работать со второго фрейма в сцене
@@ -31,6 +35,8 @@ public class PlayerController : MonoBehaviour
         //но что если у нас будет много уровней, тогда нужно будет перемещать кучу финишей, что крайне неудобно
         _finish = GameObject.FindGameObjectWithTag("Finish").GetComponent<Finish>(); // получаем игровой обьект финиш(Дом в сцене), FindGameObjectWithTag - метод который ищет тег и в нем ищет скрипт Finish
         _leverArm = FindObjectOfType<LeverArm>(); // FindObjectOfType ищет на "сцене" обьект с типом LevelArm
+        //_jumpSound = GetComponent<AudioSource>();
+
 
 
     }
@@ -44,7 +50,8 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(1)) && _isGround) // если нажал на Спейс и Isground = true,
         {
             isJump = true;
-            Debug.Log("Enter Space");
+            jumpSound.Play();
+
         }
 
         // if (Input.GetKeyDown(KeyCode.F) && isFinish) // есди нажать клавишу F то наш обьект финиш исчезнет со сцены

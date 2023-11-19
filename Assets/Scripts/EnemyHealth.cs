@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float totalHealth = 100f;
     [SerializeField] private Animator animator;
 
+
     //private Animator _animator;
     private float _health;
 
@@ -21,6 +22,7 @@ public class EnemyHealth : MonoBehaviour
     }
     public void ReduceHealth(float damage)
     {
+
         _health -= damage;
         InitHealth();
         animator.SetTrigger("TakeDamage");

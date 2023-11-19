@@ -5,6 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private float damage = 20f; // создаем переменную с уроном
+    [SerializeField] private AudioSource enemyHitSound;
     private AttackController _attackController;
     //[SerializeField] private _attackController; 1й способ, нужно будет передавать его в юнити 
 
@@ -22,6 +23,7 @@ public class Weapon : MonoBehaviour
         if (enemyHealth != null && _attackController.IsAttack) // если enemyController не равно ничему и в _attackController.IsAttack перевенная _isAttack == true, то удар совершился
         {
             enemyHealth.ReduceHealth(damage); // передаем урон в скрипт EnemyHealth
+            enemyHitSound.Play();
         }
     }
 }
