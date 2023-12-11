@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speedX = -1f;
     [SerializeField] private Animator animator; // получаем доступ к аниматору
     [SerializeField] private Transform playerModelTransform; // урок 72 мы создали переменную, в юнити мы поместим в нее модель из Player, для того, чтобы поварачивалась сама модель, о не плееер, для того, чтобы не переворачивался наш slider
+    [SerializeField] FixedJoystick fixedJoystick; // переменная в которой будет хнанится скрипт FixedJoystick
     private float _horizontal = 0f; // устанавливаем значение по умолчанию
 
     //private AudioSource _jumpSound;
@@ -46,12 +47,12 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("speedX", Mathf.Abs(_horizontal)); // теперь с помощью метода SetFloat(может и другим быть, например SetBool), туда передаем название переменной созданой в юнити, 
                                                              //а именно speedX значение horizontal(а мы знаем, что эта переменна может быть от -1 до 1го)
                                                              // Mathf.Abs - преобразовывает число всегда в положительное
-        _horizontal = Input.GetAxis("Horizontal");// возвращает 1 или -1, при нажатий клавиш, отслежует нажатие горизонтального перемещения
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(1)) && _isGround) // если нажал на Спейс и Isground = true,
+                                                             //_horizontal = Input.GetAxis("Horizontal");// возвращает 1 или -1, при нажатий клавиш, отслежует нажатие горизонтального перемещения
+        _horizontal = fixedJoystick.Horizontal;
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(1))) // если нажал на Спейс и Isground = true,
         {
-            isJump = true;
-            jumpSound.Play();
 
+            Jump();
         }
 
         // if (Input.GetKeyDown(KeyCode.F) && isFinish) // есди нажать клавишу F то наш обьект финиш исчезнет со сцены
@@ -68,15 +69,7 @@ public class PlayerController : MonoBehaviour
         // оптимизируем код
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (_isFinish)
-            {
-                _finish.FinishLevel();
-            }
-
-            if (_isLeverArm)
-            {
-                _leverArm.ActivateLevelArm();
-            }
+            Interact();
         }
 
         if (_horizontal > 0f && !_isFacingRight) // поскольку horizontal может быть либо 1 или -1, в зависимости куда движется игрок, записуем переменну со значением
@@ -155,5 +148,28 @@ public class PlayerController : MonoBehaviour
         playerModelTransform.localScale = playerScale; // теперь присваеваем значение персонажа
 
         // если коротко, мы скопировали весь вектор, потом поменяли его значение и в конце присвоили новое
+    }
+
+    public void Jump()
+    {
+        if (_isGround)
+        {
+            isJump = true;
+            jumpSound.Play();
+        }
+
+    }
+
+    public void Interact()
+    {
+        if (_isFinish)
+        {
+            _finish.FinishLevel();
+        }
+
+        if (_isLeverArm)
+        {
+            _leverArm.ActivateLevelArm();
+        }
     }
 }

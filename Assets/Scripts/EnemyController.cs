@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float patrolSpeed = 1f;// скорость патрулирования
     [SerializeField] private float timeToWait = 5f; // время которое будет ждать враг перед тем как пойти в обратную сторону(5секунд)
     [SerializeField] private float timeToChase = 3f; // 3 секунды будет нас преследовать враг, после того как мы пропали с области видимости
-    [SerializeField] private float minDistanceToPlayer = 1.5f; // переменная которая хранит минимальную дистанцтю врага к игроку
+    //[SerializeField] private float minDistanceToPlayer = 1.5f; // переменная которая хранит минимальную дистанцтю врага к игроку
     [SerializeField] private float chasingSpeed = 3f; // скорость преследования нашего игрока
     [SerializeField] private Transform enemyModelTransform;
 
@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour
     private bool _isFacingRight = true;
     private bool _isWait = false;
     private bool _isChasingPlayer = false;
+    private bool _colliderWhithPlayer; // булевая переменная в которой мы будем хранить - столкнулись ли мы с коллайдером игрока
 
     private float _waitTime;
     private float _chaseTime; // время которое будет преследовать наш враг игрока
@@ -72,7 +73,8 @@ public class EnemyController : MonoBehaviour
     {
         _nextPoint = Vector2.right * _walkSpeed * Time.fixedDeltaTime;
 
-        if (_isChasingPlayer && Mathf.Abs(DistaceToPlayer()) < minDistanceToPlayer) // Mathf.Abs преобразовывает отрицательное число в положительное
+        //if (_isChasingPlayer && Mathf.Abs(DistaceToPlayer()) < minDistanceToPlayer) // Mathf.Abs преобразовывает отрицательное число в положительное
+        if (_isChasingPlayer && _colliderWhithPlayer)
         { // если позиция от врага до игрока меньше 1,5, то выйди из функции, преследование прекратится
             return;
         }
@@ -173,6 +175,23 @@ public class EnemyController : MonoBehaviour
         // если коротко, мы скопировали весь вектор, потом поменяли его значение и в конце присвоили новое
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        PlayerController player = other.gameObject.GetComponent<PlayerController>();
+        if (player != null)
+        {
+            _colliderWhithPlayer = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        PlayerController player = other.gameObject.GetComponent<PlayerController>();
+        if (player != null)
+        {
+            _colliderWhithPlayer = false;
+        }
+    }
 
 
 

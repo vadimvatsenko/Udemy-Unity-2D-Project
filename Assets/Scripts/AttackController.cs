@@ -12,15 +12,13 @@ public class AttackController : MonoBehaviour
 
 
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            _isAttack = true;
-            animator.SetTrigger("attack");
-            attackSound.Play();
-        }
-    }
+    // private void Update()
+    // {
+    //     if (Input.GetMouseButtonDown(0))
+    //     {
+    //         Attack();
+    //     }
+    // }
 
     public bool IsAttack
     {
@@ -30,5 +28,12 @@ public class AttackController : MonoBehaviour
     public void FinishAttack()
     {
         _isAttack = false;
+    }
+
+    public void Attack()
+    {
+        _isAttack = true;
+        animator.SetTrigger("attack");
+        attackSound.Play();
     }
 }
